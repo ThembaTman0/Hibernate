@@ -1,24 +1,37 @@
-package org.example;
+package org.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Entity(name = "users")
-@Table(name = "users")
+@Entity(name="users")
+@Table(name="users")
 public class Users {
     @Id
-    @Column(name = "user_id")
+    @Column(name="user_id")
     int userId;
-    @Column(name = "username")
+
+    @Column(name="username")
     String username;
-    @Column(name = "password")
+
+    @Column(name="password")
     String password;
-    @Column(name = "first_name")
+
+    @Column(name="first_name")
     String firstname;
-    @Column(name = "last_name")
+
+    @Column(name="last_name")
     String lastname;
+
+
+    public Users(String username, String password, String firstname, String lastname) {
+        super();
+        this.username = username;
+        this.password = password;
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
 
     public int getUserId() {
         return userId;
@@ -59,4 +72,6 @@ public class Users {
     public void setLastname(String lastname) {
         this.lastname = lastname;
     }
+
+
 }
