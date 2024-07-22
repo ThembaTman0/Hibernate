@@ -24,6 +24,9 @@ public class Users {
     @Column(name="last_name")
     String lastname;
 
+    public Users() {
+        super();
+    }
 
     public Users(String username, String password, String firstname, String lastname) {
         super();
