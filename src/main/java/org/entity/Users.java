@@ -1,28 +1,26 @@
 package org.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity(name="users")
 @Table(name="users")
 public class Users {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="user_id")
-    int userId;
+    private int userId;
 
     @Column(name="username")
-    String username;
+    private String username;
 
     @Column(name="password")
-    String password;
+    private String password;
 
     @Column(name="first_name")
-    String firstname;
+    private String firstname;
 
     @Column(name="last_name")
-    String lastname;
+    private String lastname;
 
     public Users() {
         super();
@@ -76,5 +74,14 @@ public class Users {
         this.lastname = lastname;
     }
 
-
+    @Override
+    public String toString() {
+        return "Users{" +
+                "userId=" + userId +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                '}';
+    }
 }
