@@ -24,7 +24,8 @@ public class App {
             //Update User
             app.updateUser(factory, readUser.getUserId(),"JohnWickUpdated", "newpass1234");
 
-
+            // Delete the user
+            app.deleteUser(factory, readUser.getUserId());
         }finally {
             factory.close();
         }
@@ -81,6 +82,24 @@ public class App {
             }
 
         }finally {
+            session.close();
+        }
+    }
+
+    public void deleteUser(SessionFactory factory,int userId){
+        Session session = factory.getCurrentSession();
+        try{
+            session.beginTransaction();
+            Users users = session.get(Users.class,userId);
+            if(users!=null){
+                session.delete(users);
+                session.getTransaction().commit();
+                System.out.println("User deleted: " + users);
+            }else{
+                System.out.println("User not found with ID: " + userId);
+            }
+        }
+        finally {
             session.close();
         }
     }
