@@ -1,2 +1,1 @@
-**Basic Hibernate setup and hibernate framework
-**
+**Basic Hibernate setup and hibernate framework**
