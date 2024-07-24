@@ -54,7 +54,7 @@ Update: Updates the user data.
 Delete: Deletes the user from the database.
 
 ## Acknowledgments
-Hibernate ORM Documentation
+Hibernate ORM Documentation[https://hibernate.org/orm/documentation/6.5/]
 
 
 Feel free to modify the content as needed to better suit your project specifics.
