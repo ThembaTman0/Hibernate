@@ -8,19 +8,6 @@ This project is a simple Java application demonstrating the use of Hibernate for
 - Hibernate ORM
 - MySQL
 
-## Project Structure
-
-src/main/java
-├── org
-│ ├── entity
-│ │ └── Users.java
-│ └── main
-│ └── App.java
-├── resources
-│ ├── hibernate.cfg.xml
-│ └── log4j2.xml
-
-
 ## Setup
 
 ### Prerequisites
