@@ -45,7 +45,7 @@ Create a MySQL database named `project` and configure the user and password in t
     </session-factory>
 </hibernate-configuration>
 ```
-##Usage
+## Usage
 The application performs the following operations:
 
 Create: Inserts a new user into the database.
@@ -53,6 +53,8 @@ Read: Reads and prints the user data from the database.
 Update: Updates the user data.
 Delete: Deletes the user from the database.
 
+## Acknowledgments
+Hibernate ORM Documentation
 
 
 Feel free to modify the content as needed to better suit your project specifics.
